@@ -5,18 +5,25 @@ import hashlib as hash
 
 #Password Manager Classes section
 class PasswordManager:
-    """Class to declare the main initialiser for the Password Manager"""
+    """ Main class to declare the initialiser for the Password Manager.
+    Since it requires user input with 'self', it does not require any arguments. """
     def __init__(self):
         self.master_password_hash = None
+        """ An empty dictionary is created to sort the user password input. 
+        This is further developed in 'show_entries' method. """
         self.password = {}
 
-    """The method below set up the Master Password if the user has not already set one. 
-    the 'password' variable is stored in 'self.master_password' which is taken from the 
-    the above initialiser"""
+    """ The method below sets up the 'Master Password' if the user has not already 
+    set one. The 'password' variable is stored in 'self.master_password', which is 
+    taken from the above initialiser. """
     def set_master_password(self, master_password):
         self.master_password_hash = hash.sha256(master_password.encode()).hexdigest()
         print(f"\nMaster password has been set.\nMaster Password Encrypted: {self.master_password_hash}\n")
 
+    """ Method section that adds the entry to the password manager, first it checks if 
+    user has set a 'master password' before accepting any entries. The password is also
+    saved as an encryption using the 'hashlib - sha256' module to add an additional layer of 
+    security in case of a breach. """
     def add_entry(self, website, username, password):
         if self.master_password_hash is None:
             print("Please enter Master Password.\n")
@@ -33,7 +40,9 @@ class PasswordManager:
         print(f"Username: {username}")
         print(f"Password encrypted: {password_hash}\n")
 
-
+    """ Method that shows the stored entries, first it checks whether the 'Master Password' has 
+    been set, and checks if there are any stored entries. Any stored entries will
+    be saved in a dictionary in the 'self.password' initialiser. """
     def show_entries(self):
 
         if self.master_password_hash is None:
@@ -53,18 +62,18 @@ class PasswordManager:
 
 #Password Generator Class
 class RandomPasswordGenerator:
-    """This class will generate a random password that has a mixture of letters (A to Z),
-    numbers (0 - 9) and symbol obtained from the 'string' and 'random' modules"""
+    """ This class will generate a random password that has a mixture of letters (A to Z),
+    numbers (0 - 9) and symbols obtained from the 'string' and 'random' modules. """
     def __init__(self):
-        """The initialiser below is obtained from 'string' module, reference taken from
-        https://docs.python.org/3/library/string.html"""
+        """ The initialiser below is obtained from 'string' module, reference taken from
+        https://docs.python.org/3/library/string.html """
         self.letters = list(string.ascii_letters)
         self.numbers = list(string.digits)
-        self.punctuation = list("!@£#$%^&*()_+") #string.punctuation
-
+        self.punctuation = list(string.punctuation) #"!@£#$%^&*()_+"
+    
     def user_password_input(self):
-        """This section allows the user to enter the lenth of the password using a while loop..
-        The loop also check that users enters a number with a 'try' and 'except' function"""
+        """ This section allows users to enter the password length using a while loop.
+        The loop also checks that users entries a number with a 'try' and 'except' function. """
         while True:
             try:
                 user_input = int(input("\nPlease enter the length of your password: "))
@@ -83,12 +92,12 @@ class RandomPasswordGenerator:
         return password
 
 
-
 #Terminal Demo
 if __name__ == "__main__":
     password_manager = PasswordManager()
     password_generator = RandomPasswordGenerator()
 
+    """ The while loop below is taken in the user option for the pass manager program. """
     while True:
         print("1. Enter Master Password")
         print("2. Add Entry")
