@@ -34,8 +34,13 @@ The `hashlib` module uses the `sha256()` method to produce a hexadecimal `string
 9.	The final test phase first initialises `if __name__ == “__main__”:` so the file will run as a script. The two classes are saved as two objects, `password_manager = PasswordManager()` and `password_generator = RandomPasswordGenerator()` a `while loop`, with `if`, `elif` and `else` statements asking the user to select from five options. 
 
 •	Option 1 sets the master password obtained from the object `password_manager = PasswordManager()` with an `if` and `else` statement checking the master password and entries. 
+
 •	Option 2 adds an entry; it runs a `while loop` checking for the master password within an `if` and `else` statement. The password is generated from the `password_generator` object.
+
 •	Option 3  shows the user entries from the `show_entries()’ method.
+
 •	Option 4 generates a random password from the `password_generator = RandomPasswordGenerator()` object. 
+
 •	Option 5 exits the programme with a `break` function to stop the `while loop`.
+
 •	A final `else` statement checks if a user enters a wrong input.
