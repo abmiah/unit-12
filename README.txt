@@ -1,7 +1,7 @@
-# Unit 12 – End of Module Assignment: EMA: OOP application of principles and concepts
+<h1>Unit 12 – End of Module Assignment: EMA: OOP application of principles and concepts</h1>
 
 
-**Project Description and Background: **
+<strong>Project Description and Background:</strong>
 To execute a programme base written assignment, which you can find on the following e-portfolio page: [https://abmiah.github.io/eportfolio/posts/individual-essay-unit9.html] (https://abmiah.github.io/eportfolio/posts/individual-essay-unit9.html]) The client is based in East London and recently opened a new store a few miles away to cater to the increasing demand. They want to scale their sales using the latest technology and online shopping system (OSS). However, they are seeking clarification about the setup process and are concerned about the risk of cybercrime. A single cyberattack can severely impact the business, its reputation, and the trust of its customers.
 
 To comply with GDPR, it is advisable to leverage an established delivery service, like Uber Eats, to avoid handling and storing customer data.  Regarding the security proposal, the document emphasises two efficient threat modelling techniques: implementing a password manager and two-factor authentication (2FA). Both measures are both easy to implement and pertinent to a cost-effective solution.
