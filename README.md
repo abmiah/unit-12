@@ -1,5 +1,4 @@
 <h1>Unit 12 – End of Module Assignment: EMA: OOP application of principles and concepts</h1>
-**Unit 12 – End of Module Assignment: EMA: OOP application of principles and concepts**
 
 
 <strong>Project Description and Background:</strong>
