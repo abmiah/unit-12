@@ -29,7 +29,7 @@ The `hashlib` module uses the `sha256()` method to produce a hexadecimal `string
 
 7.	A method of `def user_password_input(self)` uses a combination of `while loop` to get the user input of the length of the password and `try` and `except` block, which handles any error that the user may cause for example entering a password length that less than eight characters long or entering a non `integer` input. 
 
-8.	The final method within the class `def generate_password(self)` obtains the data from the `list` variables saved in the main initialisers to `characters` and then the variable `password` using the `.join()` function that converts `list` items into a single sting with `random.choice(characters)`. This is then looped using the input from `user_password_input` to return the final password.
+8.	The final method within the class `def generate_password(self)` obtains the data from the `list` variables saved in the main initialisers to `characters` and then the variable `password` using the `.join()` function that converts `list` items into a single string with `random.choice(characters)`. This is then looped using the input from `user_password_input` to return the final password.
 
 9.	The final test phase first initialises `if __name__ == “__main__”:` so the file will run as a script. The two classes are saved as two objects, `password_manager = PasswordManager()` and `password_generator = RandomPasswordGenerator()` a `while loop`, with `if`, `elif` and `else` statements asking the user to select from five options. 
 
@@ -37,7 +37,7 @@ The `hashlib` module uses the `sha256()` method to produce a hexadecimal `string
 
 •	Option 2 adds an entry; it runs a `while loop` checking for the master password within an `if` and `else` statement. The password is generated from the `password_generator` object.
 
-•	Option 3  shows the user entries from the `show_entries()’ method.
+•	Option 3  shows the user entries from the `show_entries()` method.
 
 •	Option 4 generates a random password from the `password_generator = RandomPasswordGenerator()` object. 
 
